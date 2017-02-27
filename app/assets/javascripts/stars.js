@@ -7,6 +7,7 @@ $(function(){
 
     parentDiv.className = 'stars stars-show-big set_stars stars-show-' + (value * 10);
     $(msgContainer).text(msgs[ value - 1 ])
+    $(this).click();
   })
   
 })
