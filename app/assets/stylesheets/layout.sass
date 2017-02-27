@@ -1,0 +1,103 @@
+html
+  min-height: 100%
+  position: relative
+body
+  font: normal 16px Helveticca, Arial, sans-serif
+  @include box-sizing(border-box)
+  .content
+    max-width: 950px
+    margin: 0 auto
+    position: relative
+  main.content
+    margin-bottom: 220px
+    padding: 30px 5%
+  header
+    a
+      cursor: pointer
+      color: $text_white
+      display: inline-block
+      &:hover
+        text-decoration: none
+        color: $text_white
+        background: $highlight_red
+      &:focus
+        color: $text_white
+        text-decoration: none
+    div.header
+      background: $primary_red image-url('header_stars') no-repeat 0 0
+      background-size: 100% auto
+      width: 100%
+      height: 60px
+      position: relative
+      a.brand
+        display: inline-block
+        height: 36px
+        width: 70px
+        text-indent: -999999px
+        background: transparent image-url('logo') no-repeat
+        background-size: 100% 100%
+        margin-top: 12px
+        margin-left: calc(36px + 6%)
+      span#sign-up
+        display: inline-block
+        @include abs-pos(12px, 5%, auto, auto)
+        a
+          padding: 10px 20px
+          background: $darker_red
+          @include border-radius(5px)
+          &:hover
+            background: $highlight_red
+    nav
+      background: $darker_red
+      font-size: 0.9em
+      position: relative
+      display: block
+      ul.nav-list
+        padding: 0
+        display: inline-block
+        width: 80%
+        margin-right: 5%
+        margin-bottom: 0
+        li
+          display: inline-block
+          a
+            padding: 5px 20px
+      span#log-in
+        @include abs-pos(0, 5%, auto, auto)
+        a
+          padding: 5px 28px
+  footer
+    background: $light_grey
+    background-size: 100% 200px
+    border-top: 1px solid $footer_grey
+    height: 220px
+    @include abs-pos(auto, 0, 0, 0)
+    div#background-city
+      min-width: 200px
+      max-width: 1000px
+      margin: 0 auto
+      background: transparent image-url('footer_cityscape') no-repeat 0 0
+      background-size: 100% 100%
+      height: 200px
+    div#copyright
+      text-align: center
+      font-size: 0.7em
+
+@media (max-width: $break-medium)
+  body > header > nav
+    display: none
+  body > header > nav > div > ul.nav-list
+    display: block
+    width: 100%
+    li
+      display: block
+      a
+        display: block
+  body > header > nav > div > span#log-in
+    position: static
+    a
+      display: block
+      padding: 5px 20px
+
+
+

@@ -1,0 +1,44 @@
+header.main_business
+  height: auto
+  background: $light_grey
+  border: 2px solid $footer_grey
+  padding: 20px 2.5%
+  div.content
+    overflow: hidden
+  div.left
+    float: left
+    width: 75%
+  div.left > h4
+    font-size: 1.5em
+    color: $primary-red
+    margin-bottom: 10px
+    cursor: default
+  div.right
+    float: left
+    width: 25%
+    a
+      padding: 10px 20px
+      margin-bottom: 20px
+      background: $primary-red
+      border: none
+      @include border-radius(6px)
+      &:hover
+        background: $darker-red
+      i.fa-star
+        background: transparent
+div.reviews-index > h3
+  font-size: 1.8em
+  margin-bottom: 20px
+  color: $primary-red
+@media (max-width: $break-medium)
+  header.main_business
+    div.content
+      text-align: center
+      div.left, div.right
+        float: none
+        margin-bottom: 20px
+        width: 100%
+  div.reviews-index > h3
+    text-align: center
+
+

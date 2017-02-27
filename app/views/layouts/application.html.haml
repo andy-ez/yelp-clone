@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= "#{yield(:title)}| YelpVersion"
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body
+    = render 'shared/header' 
+    = render 'shared/messages'
+    = yield(:page_heading)
+    %main.content
+      = yield
+    = render "shared/footer"

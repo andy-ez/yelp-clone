@@ -1,0 +1,46 @@
+- content_for(:title, "Recent Reviews")
+- content_for(:page_heading) do
+  %header.main
+    %h3.content Recent Reviews
+%div.reviews-index
+  %ul.reviews-list
+    %li
+      %div.reviews-body
+        %div.reviews-left
+          = image_tag("avatar")
+          = link_to("#") do
+            %p Cathy Duran
+          %p London
+          = fa_icon "star"
+          %span 10 Reviews
+        %div.reviews-right
+          %div.business-review-summary
+            = link_to("#") do
+              %h3 Business Cafe Name
+          %div.business-address
+            %p.address Address Line 1, London
+          %div.stars.stars-show.stars-show-35
+          %div.review
+            %p
+              Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text
+    %li
+      %div.reviews-body
+        %div.reviews-left
+          = image_tag("avatar")
+          = link_to("#") do
+            %p Cathy Duran
+          %p London
+          = fa_icon "star"
+          %span 10 Reviews
+        %div.reviews-right
+          %div.business-review-summary
+            = link_to("#") do
+              %h3 Business Cafe Name
+          %div.business-address
+            %p.address Address Line 1, London
+          %div.stars.stars-show.stars-show-35
+          %span 22/02/2017
+          %div.review
+            %p
+              Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text
+      

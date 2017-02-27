@@ -1,0 +1,4 @@
+- if flash.any? 
+  - flash.each do |class_name, msg|
+    %div{ :class => "alert alert-#{class_name}" }
+      %div.content= msg

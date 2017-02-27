@@ -1,0 +1,29 @@
+- content_for(:title, "New Review")
+- content_for(:page_heading) do
+  %header.main
+    %h3 Write a Review
+%div.business_detail
+  = link_to "#" do
+    %h4 Newfoundland Burger Co.
+  %p
+    £££ - 
+    %span Takeaway
+    %span Fast Food
+    %Span Burgers
+  %p 102 Park Avenue Way
+  %p London, XX2 00X
+  %p 0207-777-7878
+
+%h5#your-review Your Review:
+%form(action='' method='post')
+  %div.review-form(tabindex='-1')
+    %div.review-box
+      %section.set_rating
+        %div.stars.stars-show-big.stars-show-0.set_stars
+          - 5.times do |i|
+            %input(type='radio' name='rating' id='rating-#{ i + 1 }' value='#{ i + 1 }')
+        %span Choose a rating
+    %div.text-area
+      %textarea(placeholder='Your review helps others learn about great local businesses' name='review_body' id='review_body')
+  %button(type='submit' id='review_submit')
+    Submit Review

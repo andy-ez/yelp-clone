@@ -1,0 +1,44 @@
+- content_for(:title, "User Profile")
+- content_for(:page_heading) do
+  %header.main_user_banner
+    %div.content#user_banner
+      =image_tag('avatar')
+      %header
+        %h1
+          Donald Duckleys
+        %p
+          London
+        %p
+          = fa_icon "star"
+          %span 91 Reviews
+%div.reviews-index.user
+  %h3 Recent Reviews
+  %ul.reviews-list
+    %li
+      %div.reviews-body
+        %div.reviews-right.user
+          %div.business-review-summary
+            = link_to("#") do
+              %h3 Business Cafe Name
+          %div.business-address
+            %p.address Address Line 1, London
+          %div.stars.stars-show.stars-show-35
+          %div.review
+            %p
+              Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text
+    %li
+      %div.reviews-body
+        %div.reviews-right.user
+          %div.business-review-summary
+            = link_to("#") do
+              %h3 Business Cafe Name
+          %div.business-address
+            %p.address Address Line 1, London
+          %div.stars.stars-show.stars-show-35
+          %span 22/02/2017
+          %div.review
+            %p
+              Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text
+      
+      
+

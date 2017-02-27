@@ -1,0 +1,55 @@
+- content_for(:title, "Business Page")
+- content_for(:page_heading) do
+  %header.main_business
+    %div.content
+      %div.left
+        %h4 Business Title OF Carnegie Melon Melons and Pancakes
+        %div.business-review-summary
+          %div.stars.stars-show-big.stars-show-35
+          %span 183 reviews
+          %p
+            £££ - 
+            %span Takeaway
+            %span Fast Food
+            %Span Burgers
+      %div.right
+        = link_to "#" do
+          = fa_icon 'star'
+          %span Write A Review
+        %div.business-address
+          %p.address.line-1 Address Line 1
+          %p.address.city Swindon, PCODE
+          %p.address.phone 0207-777-6452
+%div.reviews-index
+  %h3 Recent Reviews
+  %ul.reviews-list
+    %li
+      %div.reviews-body
+        %div.reviews-left
+          = image_tag("avatar")
+          = link_to("#") do
+            %p Cathy Duran
+          %p London
+          = fa_icon "star"
+          %span 10 Reviews
+        %div.reviews-right
+          %div.stars.stars-show.stars-show-35
+          %div.review
+            %p
+              Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text
+    %li
+      %div.reviews-body
+        %div.reviews-left
+          = image_tag("avatar")
+          = link_to("#") do
+            %p Cathy Duran
+          %p London
+          = fa_icon "star"
+          %span 10 Reviews
+        %div.reviews-right
+          %div.stars.stars-show.stars-show-35
+          %span 22/02/2017
+          %div.review
+            %p
+              Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text Lorem ipsum text lorem ipsum text lorem pisum text
+      

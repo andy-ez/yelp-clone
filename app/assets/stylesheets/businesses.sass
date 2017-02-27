@@ -1,0 +1,58 @@
+header.main
+  padding: 20px 
+  width: 100%
+  background: $light_grey
+  border-bottom: 1px solid $footer_grey
+  color: $primary_red
+  h3
+    font-weight: bold
+    font-size: 1.2em
+    text-align: center
+div.business-index
+  ul
+    li
+      padding: 20px 0
+      border-top: 1px solid $footer_grey
+      div.business-body
+        overflow: hidden
+        margin-bottom: 15px
+        div.business-left
+          width: 70%
+          float: left
+          a
+            h3
+              font-size: 1.4em
+              margin-bottom: 10px
+          div.business-review-summary
+            span
+              vertical-align: top
+              font-size: 0.8em
+              line-height: 18px
+              margin-left: 5px
+            p
+              font-size: 0.9em
+              margin-top: 5px
+              span
+                display: inline-block
+                padding: 2px 5px
+                @include border-radius(3px)
+                background: $light_grey
+                cursor: pointer
+                vertical-align: middle
+        div.business-right
+          float: left
+          font-size: 0.9em
+      div.description
+        p
+          font-size: 0.7em
+@media (max-width: $break-small)
+  div.business-index
+    ul
+      li
+        div.business-body
+          div.business-left
+            width: 100%
+            float: none
+            margin-bottom: 15px
+          div.business-right
+            float: none

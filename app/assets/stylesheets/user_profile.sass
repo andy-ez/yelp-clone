@@ -1,0 +1,49 @@
+header.main_user_banner
+  width: 100%
+  background: $light_grey
+  border-bottom: 2px solid $footer_grey
+  padding: 0 5% 0 5%
+div.content#user_banner
+  height: 200px
+  position: relative
+  img
+    width: 200px
+    height: 200px
+    position: relative
+    top: 50px
+    float: left
+    margin-right: 20px
+  header
+    padding: 50px 0 0 0
+    h1
+      font-size: 2.5em
+      margin-bottom: 10px
+    p
+      margin-bottom: 5px
+div.reviews-index.user
+  margin-top: 50px
+div.reviews-index.user > h3
+  font-size: 1.8em
+  margin-bottom: 20px
+  color: $primary-red
+@media (max-width: $break-medium)
+  div.content#user_banner
+    header
+      padding: 10px 0 0 0
+      text-align: center
+      h1
+        font-size: 1.8em
+        margin-bottom: 5px 0
+      p
+        margin-bottom: 3px
+    img
+      float: none
+      @include abs-pos(150px, 0, 0, 50%)
+      margin-left: -100px
+  div.reviews-index.user
+    margin-top: 150px
+  div.reviews-index.user > h3
+    text-align: center
+    font-size: 1.5em
+
+  

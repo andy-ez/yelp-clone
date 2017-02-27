@@ -1,0 +1,62 @@
+ul.reviews-list
+  li
+    padding: 20px 0
+    border-top: 1px solid $footer_grey
+    div.reviews-body
+      overflow: hidden
+      margin-bottom: 15px
+      div.reviews-left
+        float: left
+        width: 30%
+        overflow: hidden
+        a
+          display: block
+          margin-bottom: 3px
+          font-weight: bold
+        p
+          margin-bottom: 2px
+        img
+          width: 55px
+          height: 55px
+          float: left
+          margin-right: 10px
+      div.reviews-right.user
+        float: none
+        width: 100%
+      div.reviews-right
+        float: left
+        width: 70%
+        a
+          h3
+            font-size: 1.4em
+            margin-bottom: 5px
+        span
+          display: inline-block
+          line-height: 18px
+          vertical-align: top
+          font-size: 0.9em
+          line-height: 18px
+          margin-left: 10px
+        div.business-address
+          margin-bottom: 10px
+        div.review
+          margin-top: 20px
+i.fa-star
+  background: $primary_red
+  color: $text_white
+  display: inline-block
+  padding: 1px
+@media (max-width: $break-medium)
+  div.reviews-index
+    ul.reviews-list
+      li
+        div.reviews-body
+          div.reviews-left, div.reviews-right
+            width: 100%
+            float: none
+            margin-bottom: 15px
+          div.reviews-left
+            border-bottom: 1px solid $footer_grey
+            padding-bottom: 15px
+            p
+              display: inline-block

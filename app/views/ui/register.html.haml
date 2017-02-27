@@ -1,0 +1,22 @@
+- content_for(:title, "Register")
+%div#login-page
+  %div.login-right
+  %div.login-left
+    %form
+      %h3 Sign Up for Yelp
+      %p
+        Connect with great local businesses
+      %fieldset
+        %input(type='text' name='first_name' placeholder='First Name' class='name')
+        %input(type='text' name='last_name' placeholder='Last Name' class='name')
+        %input(type='email' name='email' placeholder='Email')
+        %input(type='text' name='city' placeholder='City')
+        %input(type='text' name='post_code' placeholder='Postal Code')
+        %input(type='password' name='password' placeholder='Password')
+      %button(type='submit') Log In
+      %div
+        %small
+          Already on Yelp?
+          =link_to "Log In", "#"
+
+

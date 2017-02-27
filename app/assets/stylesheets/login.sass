@@ -1,0 +1,78 @@
+#login-page
+  overflow: hidden
+  padding-top: 20px
+  a
+    cursor: pointer
+  div.login-right
+    float: right
+    width: 50%
+    height: 350px
+    background: transparent image-url('signup') no-repeat
+  div.login-left
+    float: left
+    width: 50%
+    padding-top: 10px
+    form
+      max-width: 500px
+      padding: 20px
+      text-align: center
+      margin: 0 auto
+      h3
+        color: $primary_red
+        font-size: 1.5em
+        margin-bottom: 5px
+        font-weight: bold
+      p
+        margin-bottom: 45px
+        font-size: 0.8em
+        font-weight: bold
+        padding-bottom: 15px
+        border-bottom: 1px solid $footer_grey
+      input[type].name
+        width: 145px
+        display: inline-block
+      input[type]
+        width: 300px
+        height: 30px
+        font-size: 16px
+        padding: 5px
+        border: 1px solid $footer_grey
+        @include border-radius(5px)
+        display: block
+        margin: 0 auto 25px auto
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.15)
+        @include box-sizing(border-box)
+        &:focus
+          outline: none
+          box-shadow: inset 0 2px 2px rgba(0,0,0,0.15), 0 0 6px rgba(0,126,255,0.5)
+      button[type='submit']
+        width: 300px
+        height: 30px
+        box-shadow: 0 1px 1px rgba(0,0,0,0.3)
+        background: $primary_red
+        color: $text_white
+        cursor: pointer
+        margin-top: 25px
+        border: none
+        @include border-radius(5px)
+        &:hover
+          background: $highlight_red
+      div
+        text-align: right
+        color: #a99999
+        padding: 10px 30px 0 0
+        font-size: 0.95em
+
+@media (max-width: $break-medium)
+  #login-page
+    div.login-right, div.login-left
+      float: none
+      width: 100%
+    div.login-right
+      background-size: 100% 100%
+      background-position: center
+      width: 200px
+      height: 200px
+      margin: 0 auto
+    div.login-left
+      padding-top: 10px
