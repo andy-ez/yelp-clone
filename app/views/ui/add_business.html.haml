@@ -1,0 +1,24 @@
+- content_for(:title, "New Review")
+- content_for(:page_heading) do
+  %header.main
+    %h3 Add Business
+%div#new_business
+  %div.login-right
+  %div.login-left
+    %form#add_new_business
+      %h3 New Business
+      %p
+        Add a new Business
+      %fieldset
+        %input(type='text' name='name' placeholder='Business Name' )
+        %input(type='text' name='address_line_1' placeholder='Address Line 1' )
+        %input(type='text' name='city' id='city' placeholder='City')
+        %input(type='text' name='post_code' placeholder='Postal Code')
+        %input(type='text' name='phone_number' placeholder='Phone Number')
+        %input(type='number' name='expense' placeholder='Expense Rating 1-4' min='1' max='4')
+        %select(multiple)
+          %option(disabled selected) Select Categories
+          %option Category
+          %option Another
+          %option Third
+      %button(type='submit') Create
