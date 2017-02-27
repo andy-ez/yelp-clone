@@ -5,7 +5,7 @@ describe BusinessesController do
     before { 10.times { Fabricate(:business) } }
     it "should assign businesses instance variable" do
       get :index
-      expect(assigns(:businesses)).to eq(Business.all)
+      expect(assigns(:businesses)).to eq(Business.first(10))
     end
   end
 end
