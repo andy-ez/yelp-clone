@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# 20.times { Fabricate(:user) }
+# 75.times { Fabricate(:business) }
+# 10.times { Fabricate(:category) }
+# 100.times { Fabricate(:review, user: User.all.sample, business: Business.all.sample)  }
+# Business.all.each do |biz|
+#   biz.categories = Category.all.sample([2, 3, 4].sample)
+#   biz.save
+# end
