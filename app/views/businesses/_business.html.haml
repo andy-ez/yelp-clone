@@ -1,0 +1,21 @@
+%li
+  %div.business-body
+    %div.business-left
+      = link_to(business) do
+        %h3= business.name
+      %div.business-review-summary
+        %div{ class: "stars stars-show stars-show-#{ (business.rating * 10).round }" }
+        %span #{business.reviews.count} reviews
+        %p
+          - business.expense.times do
+            $
+          \-
+          - business.categories.each do |category|
+            %span= category.name.titleize
+    %div.business-right
+      %div.business-address
+        %p.address.line-1= business.address_first_line
+        %p.address.city= "#{business.city}, #{business.post_code}"
+        %p.address.phone= business.phone_number
+  %div.description
+    %p= business.description
