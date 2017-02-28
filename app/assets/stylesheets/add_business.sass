@@ -3,8 +3,14 @@ div#new_business
     form#add_new_business
       fieldset
         select
+          -webkit-appearance: none
+          moz-appearance: none
+        select.collection
           height: auto
           max-height: 200px
           overflow-y: scroll
-        input[type]
+        input[type], textarea
           margin-bottom: 10px
+        textarea
+          height: 90px
+          resize: none

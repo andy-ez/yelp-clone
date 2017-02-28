@@ -1,0 +1,26 @@
+= render "shared/errors", obj: business
+
+%div#new_business
+  %div.login-right
+  %div.login-left
+    = form_for @business, html: { id: "add_new_business" } do |f|
+      %h3 New Business
+      %p
+        Add a new Business
+      %fieldset
+        = f.label :name, "Business Name"
+        = f.text_field :name, placeholder: "Business Name"
+        = f.label :description
+        = f.text_area :description, size: "34x4", placeholder: "An example description"
+        = f.label :address_first_line, "Address - First Line"
+        = f.text_field :address_first_line, placeholder: "e.g. 123 Downing Street"
+        = f.label :city
+        = f.text_field :city, placeholder: "e.g. Brompton"
+        = f.label :post_code, "Post Code"
+        = f.text_field :post_code, placeholder: "e.g. XX2 00X"
+        = f.label :phone_number, "Phone Number"
+        = f.text_field :phone_number, placeholder: "e.g. 07777222111"
+        = f.label :expense, "Expense Rating"
+        = f.select :expense, (1..4).to_a.map { |n| [n.to_s, n] }.prepend([ "Select Expense Rating", nil ]), { selected: '', disabled: '' }
+        = f.collection_select :category_ids, Category.all.to_a.prepend(Category.new(name: "Select Categories")), :id, :name, { disabled: ""}, { class: 'collection', multiple: true }
+        = f.button f.object.new_record? ? "Create" : "Update"

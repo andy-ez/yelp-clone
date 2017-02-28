@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe Business do 
   it { should validate_presence_of :name }
+  it { should validate_presence_of :description }
   it { should validate_presence_of :expense }
   it { should validate_presence_of :address_first_line }
   it { should validate_presence_of :city }
