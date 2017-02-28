@@ -52,8 +52,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'pry'
+  gem 'pry-nav'
   gem 'faker'
   gem 'fabrication'
+  gem "database_cleaner"
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
 end
@@ -69,6 +71,9 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'capybara'
+  gem 'launchy'
+  gem "selenium-webdriver"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

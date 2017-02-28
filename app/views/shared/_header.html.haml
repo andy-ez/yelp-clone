@@ -1,15 +1,15 @@
 %header
   %div.header
     %div.content
-      =link_to 'Home', '#', class: 'brand'
+      =link_to 'Home', root_path, class: 'brand'
       %span#sign-up= link_to "Sign Up", '#'
       %button.c-hamburger.c-hamburger--htx
         %span toggle menu
   %nav
     %div.content
       %ul.nav-list
-        %li= link_to "Businesses", "#"
+        %li= link_to "Businesses", businesses_path
         %li= link_to "Write a review", "#"
-        %li= link_to "Add Business", "#"
+        %li= link_to "Add Business", new_business_path
         %li= link_to "Categories", "#"
       %span#log-in= link_to "Log In", "#"
