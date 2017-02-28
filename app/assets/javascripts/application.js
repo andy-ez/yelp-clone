@@ -18,6 +18,6 @@
 
 $(function(){
   setTimeout(function(){
-    $('div.alert').fadeOut(700);
+    $('div.alert.flash').fadeOut(700);
   }, 3000)
 })

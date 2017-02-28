@@ -1,0 +1,5 @@
+- content_for(:title, "New Business")
+- content_for(:page_heading) do
+  %header.main
+    %h3 Add Business
+= render "form", business: @business
