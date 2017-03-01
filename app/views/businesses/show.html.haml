@@ -6,7 +6,7 @@
         %h4= @business.name
         %div.business-review-summary
           %div{ class: "stars stars-show-big stars-show-#{ (@business.rating * 10).round }" }
-          %span= "#{@business.reviews.count} Reviews"
+          %span= pluralize(@business.reviews.count, "Review")
           %p
             - @business.expense.times do
               $
@@ -14,8 +14,8 @@
             - @business.categories.each do |category|
               %span= category.name.titleize
       %div.right
-        - if logged_in?
-          = link_to "#" do
+        - if logged_in? && current_user.can_write_review?(@business)
+          = link_to new_business_review_path(@business) do
             = fa_icon 'star'
             %span Write A Review
         %div.business-address

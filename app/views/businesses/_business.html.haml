@@ -5,7 +5,7 @@
         %h3= business.name
       %div.business-review-summary
         %div{ class: "stars stars-show stars-show-#{ (business.rating * 10).round }" }
-        %span #{business.reviews.count} reviews
+        %span #{pluralize(business.reviews.count, "Review")}
         %p
           - business.expense.times do
             $
@@ -13,6 +13,10 @@
           - business.categories.each do |category|
             %span= category.name.titleize
     %div.business-right
+      - if logged_in? && current_user.can_write_review?(business)
+        = link_to new_business_review_path(business), class: 'review_button' do
+          = fa_icon 'star'
+          %span Write A Review
       %div.business-address
         %p.address.line-1= business.address_first_line
         %p.address.city= "#{business.city}, #{business.post_code}"

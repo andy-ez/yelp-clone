@@ -9,7 +9,7 @@
           %p= review.user.full_name
         %p= review.user.city
         = fa_icon "star"
-        %span= "#{review.user.reviews.count} Reviews"
+        %span= pluralize(review.user.reviews.count, "Review")
     %div.reviews-right
       - if show_business
         %div.business-review-summary
