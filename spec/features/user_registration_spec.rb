@@ -12,7 +12,7 @@ feature "User registration" do
     fill_in "Password", with: "password"
     click_button "Register"
 
-    expect(page).to have_content "Reviews"
+    expect(page).to have_content "Log In"
   end
 
 end

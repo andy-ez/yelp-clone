@@ -30,7 +30,7 @@
           %div.reviews-body
             %div.reviews-left
               = review.user.avatar.blank? ? image_tag("avatar") : image_tag(review.user.avatar)
-              = link_to("#") do
+              = link_to(review.user) do
                 %p= review.user.full_name
               %p= review.user.city
               = fa_icon "star"

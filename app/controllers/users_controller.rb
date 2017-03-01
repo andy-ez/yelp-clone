@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_user, only: [ :show ]
   def new
+    redirect_to root_path if logged_in?
     @user = User.new
   end
 
@@ -7,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Your account was successfully created"
-      redirect_to(@user)
+      redirect_to login_path
     else
       render :new
     end

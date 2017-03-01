@@ -1,0 +1,21 @@
+- content_for(:title, "Login")
+%div#login-page
+  %div.login-right
+  %div.login-left
+    = form_tag '/sessions', method: 'post' do
+      %h3 Log in to Yelp
+      %p
+        New to Yelp?
+        =link_to "Sign Up", register_path
+      %fieldset
+        = label_tag :email, "Enter Email Address"
+        = email_field_tag :email, params[:email], placeholder: "me@example.com", required: true
+        = label_tag :password, "Enter Password"
+        = password_field_tag :password, nil, placeholder: "Password", required: true
+      = button_tag "Log In"
+      %div
+        %small
+          New to Yelp?
+          =link_to "Sign Up", register_path
+
+

@@ -20,7 +20,7 @@
           %div.reviews-body
             %div.reviews-right.user
               %div.business-review-summary
-                = link_to("#") do
+                = link_to(review.business) do
                   %h3= review.business.name
               %div.business-address
                 %p.address= "#{review.business.address_first_line}, #{review.business.city}"
