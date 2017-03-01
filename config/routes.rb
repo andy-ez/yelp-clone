@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   root to: "businesses#index"
   get 'ui(/:action)', controller: 'ui'
   resources :businesses, only: [:index, :show, :new, :create] do
-    resources :reviews, only: [:create]
+    resources :reviews, only: [:new, :create]
   end
   get 'register', to: 'users#new'
   get 'login', to: "sessions#new"
   get 'logout', to: "sessions#destroy"
   resources :sessions, only: [:create]
   resources :users, only: [:create, :show]
+  resources :reviews, only: [:index]
 end

@@ -15,18 +15,7 @@
   %div.reviews-index.user
     %h3 Recent Reviews
     %ul.reviews-list
-      - @user.reviews .each do |review|
-        %li
-          %div.reviews-body
-            %div.reviews-right.user
-              %div.business-review-summary
-                = link_to(review.business) do
-                  %h3= review.business.name
-              %div.business-address
-                %p.address= "#{review.business.address_first_line}, #{review.business.city}"
-              %div{ class: "stars stars-show stars-show-#{review.rating * 10}"}
-              %div.review
-                %p= review.body
-      
+      - @user.reviews.each do |review|
+        = render 'reviews/review', { review: review, show_user: false }
       
 

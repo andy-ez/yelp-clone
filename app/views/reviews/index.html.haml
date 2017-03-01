@@ -1,0 +1,10 @@
+- content_for(:title, "Recent Reviews")
+- content_for(:page_heading) do
+  %header.main
+    %h3.content Recent Reviews
+%div.reviews-index
+  %ul.reviews-list
+    = render @reviews
+%div
+  = will_paginate @reviews, renderer: WillPaginate::ActionView::BootstrapLinkRenderer
+      
