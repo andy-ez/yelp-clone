@@ -15,7 +15,7 @@ feature "User interacts with business list and writes a review" do
     expect(page).to have_content("This is a good review")
     expect(page).to have_css("div.stars-show-40")
 
-    #user can see teh review on their profile page
+    #user can see the review on their profile page
     click_link "My Profile"
     expect(page).to have_content("This is a good review")
     expect(page).to have_css("div.stars-show-40")
