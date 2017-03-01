@@ -10,7 +10,7 @@
           = @user.city
         %p
           = fa_icon "star"
-          %span= "#{@user.reviews.count} Reviews"
+          %span= pluralize(@user.reviews.count, "Review")
 - if @user.reviews.any?
   %div.reviews-index.user
     %h3 Recent Reviews

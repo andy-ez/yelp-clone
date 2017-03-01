@@ -40,11 +40,26 @@ div.business-index
                 cursor: pointer
                 vertical-align: middle
         div.business-right
-          float: left
+          overflow: hidden
           font-size: 0.9em
       div.description
         p
           font-size: 0.7em
+a.review_button
+  padding: 5px 10px
+  display: block
+  text-align: center
+  font-size: 12px
+  margin-bottom: 20px
+  background: $primary-red
+  color: $text_white
+  border: none
+  @include border-radius(6px)
+  &:hover
+    background: $darker-red
+    text-decoration: none
+  i.fa-star
+    background: transparent
 @media (max-width: $break-small)
   div.business-index
     ul

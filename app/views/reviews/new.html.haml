@@ -1,0 +1,31 @@
+- content_for(:title, "New Review")
+- content_for(:page_heading) do
+  %header.main
+    %h3 Write A Review
+%div.business_detail
+  = link_to @business do
+    %h4= @business.name
+  %p
+    - @business.expense.times do
+      $
+    \-
+    - @business.categories.each do |category|
+      %span= category.name.titleize
+
+  %p= @business.address_first_line
+  %p= "#{@business.city}, #{@business.post_code}"
+  %p= "#{@business.phone_number}"
+
+%h5#your-review Your Review:
+= form_for [@business, @review] do |f|
+  = render 'shared/errors', obj: @review
+  %div.review-form(tabindex='-1')
+    %div.review-box
+      %section.set_rating
+        %div.stars.stars-show-big.stars-show-0.set_stars
+          - 5.times do |i|
+            = f.radio_button :rating, (i + 1)
+        %span Choose a rating
+    %div.text-area
+      = f.text_area :body, placeholder: 'Your review helps others learn about great local businesses'
+  = f.button "Submit Review", id: "review_submit"

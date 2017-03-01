@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def can_write_review?(business)
+    !reviews.map(&:business_id).include?(business.id)
+  end
 end
