@@ -8,11 +8,11 @@ class User < ActiveRecord::Base
   before_save { email = email.downcase if email }
 
   def profile_picture
-    avatar || "avatar"
+    avatar.blank? ? "avatar.png" : avatar
   end
 
   def thumbnail
-    thumb || profile_picture
+    thumb.blank? ? profile_picture : thumb
   end
 
   def full_name
