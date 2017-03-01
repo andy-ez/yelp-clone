@@ -2,7 +2,7 @@
 - content_for(:page_heading) do
   %header.main_user_banner
     %div.content#user_banner
-      = !@user.avatar.blank? ? image_tag(@user.avatar) : image_tag("avatar")
+      = !@user.avatar.blank? ? image_tag(@user.avatar) : image_tag("/images/avatar.png")
       %header
         %h1
           = @user.full_name
