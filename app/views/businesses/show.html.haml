@@ -14,9 +14,10 @@
             - @business.categories.each do |category|
               %span= category.name.titleize
       %div.right
-        = link_to "#" do
-          = fa_icon 'star'
-          %span Write A Review
+        - if logged_in?
+          = link_to "#" do
+            = fa_icon 'star'
+            %span Write A Review
         %div.business-address
           %p.address.line-1= @business.address_first_line
           %p.address.city= "#{@business.city}, #{@business.post_code}"
@@ -26,17 +27,5 @@
     %h3 Recent Reviews
     %ul.reviews-list
       - @business.reviews.each do |review|
-        %li
-          %div.reviews-body
-            %div.reviews-left
-              = review.user.avatar.blank? ? image_tag("avatar") : image_tag(review.user.avatar)
-              = link_to(review.user) do
-                %p= review.user.full_name
-              %p= review.user.city
-              = fa_icon "star"
-              %span= "#{review.user.reviews.count} Reviews"
-            %div.reviews-right
-              %div{ class: "stars stars-show stars-show-#{review.rating * 10}" }
-              %div.review
-                %p= review.body
+        = render "reviews/review", show_business: false, review: review
       

@@ -1,0 +1,23 @@
+- show_business = show_business.nil? ? true : show_business
+- show_user = show_user.nil? ? true : show_user
+%li
+  %div.reviews-body
+    - if show_user
+      %div.reviews-left
+        = image_tag(review.user.thumbnail)
+        = link_to(review.user) do
+          %p= review.user.full_name
+        %p= review.user.city
+        = fa_icon "star"
+        %span= "#{review.user.reviews.count} Reviews"
+    %div.reviews-right
+      - if show_business
+        %div.business-review-summary
+          = link_to(review.business) do
+            %h3= review.business.name
+        %div.business-address
+          %p.address= "#{review.business.address_first_line}, #{review.business.city}"
+      %div{ class: "stars stars-show stars-show-#{review.rating * 10}" }
+      %small= review.created_at.strftime("%d-%b-%y")
+      %div.review
+        %p= review.body
