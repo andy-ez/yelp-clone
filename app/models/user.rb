@@ -6,4 +6,16 @@ class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates_format_of :email, with: VALID_EMAIL_REGEX
   before_save { email = email.downcase if email }
+
+  def profile_picture
+    avatar
+  end
+
+  def thumbnail
+    thumb || profile_picture
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

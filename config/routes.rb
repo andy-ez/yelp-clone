@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root to: "businesses#index"
   get 'ui(/:action)', controller: 'ui'
   resources :businesses, only: [:index, :show, :new, :create]
+  get 'register', to: 'users#new'
+  resources :users, only: [:create, :show]
 end

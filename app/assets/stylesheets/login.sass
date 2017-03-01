@@ -28,9 +28,13 @@
         font-weight: bold
         padding-bottom: 15px
         border-bottom: 1px solid $footer_grey
-      input[type].name
+
+      div.name.form-grouping
         width: 145px
         display: inline-block
+        padding: 0
+        input[type='text'], div.field_with_errors
+          width: 100%
       label.name
         width: 145px
         display: inline-block
@@ -41,6 +45,7 @@
         margin: 0 auto
         font-size: 0.8em
         padding: 5px
+        color: #000000
       input[type], select, textarea
         width: 300px
         height: 30px
@@ -72,6 +77,14 @@
         color: #a99999
         padding: 10px 30px 0 0
         font-size: 0.95em
+      div.field_with_errors
+        padding: 0
+        label
+          color: #b00b00
+        input[type]
+          border: 1px solid #b00b00
+div.alert.alert-danger p
+  font-size: 0.7em
 
 @media (max-width: $break-medium)
   #login-page
