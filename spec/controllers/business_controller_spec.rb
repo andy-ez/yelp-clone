@@ -8,7 +8,7 @@ describe BusinessesController do
     end
 
     it "should assign businesses instance variable to paginated version with limit of 10" do
-      expect(assigns(:businesses)).to eq(Business.first(10))
+      expect(assigns(:businesses)).to eq(Business.order('created_at DESC').first(10))
     end
 
     it "should be ordered by created at field in reveerse chronological order" do

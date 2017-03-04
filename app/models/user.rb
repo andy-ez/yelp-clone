@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, case_sensitive: false
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates_format_of :email, with: VALID_EMAIL_REGEX
-  before_save { email = email.downcase if email }
+  before_save { self.email = self.email.downcase if self.email }
 
   def profile_picture
     avatar.blank? ? "avatar.png" : avatar

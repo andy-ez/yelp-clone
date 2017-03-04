@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
   before_action :require_user, only: [ :new, :create ]
   def index
-    @businesses = Business.paginate(page: params[:page], per_page: 10)
+    @businesses = Business.order('created_at DESC').paginate(page: params[:page], per_page: 10)
   end
 
   def show
