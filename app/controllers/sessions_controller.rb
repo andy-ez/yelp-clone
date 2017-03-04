@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       create_session(user)
     else
-      flash[:danger] = "Error - Incorrect Credentials"
+      flash.now[:danger] = "Error - Incorrect Credentials"
       render :new
     end
   end

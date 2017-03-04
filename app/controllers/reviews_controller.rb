@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
       flash[:success] = "Successfully added the review"
       redirect_to @business
     else
-      flash[:danger] = "An error occured"
+      flash.now[:danger] = "An error occured"
       render :new
     end
   end
